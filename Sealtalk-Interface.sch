@@ -254,47 +254,47 @@ Wire Wire Line
 	3000 4950 3000 5250
 Wire Wire Line
 	4050 4150 4050 4100
-Text GLabel 5500 4200 0    50   Output ~ 0
+Text GLabel 5800 4850 0    50   Output ~ 0
 Rx
-Text GLabel 5500 4300 0    50   Input ~ 0
+Text GLabel 5800 4950 0    50   Input ~ 0
 Tx
-Text GLabel 5500 4650 0    50   BiDi ~ 0
+Text GLabel 5800 5300 0    50   BiDi ~ 0
 SeatalkData
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 5F362BB5
-P 5700 4200
-F 0 "J1" H 5780 4192 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 5780 4101 50  0000 L CNN
-F 2 "Sealtalk-Interface:SCREW TERMINAL BLOCK 3.5MM 2POS" H 5700 4200 50  0001 C CNN
-F 3 "~" H 5700 4200 50  0001 C CNN
-	1    5700 4200
+P 6000 4850
+F 0 "J1" H 6080 4842 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6080 4751 50  0000 L CNN
+F 2 "Sealtalk-Interface:SCREW TERMINAL BLOCK 3.5MM 2POS" H 6000 4850 50  0001 C CNN
+F 3 "~" H 6000 4850 50  0001 C CNN
+	1    6000 4850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Screw_Terminal_01x02 J2
 U 1 1 5F362C16
-P 5700 4650
-F 0 "J2" H 5780 4642 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 5780 4551 50  0000 L CNN
-F 2 "Sealtalk-Interface:SCREW TERMINAL BLOCK 3.5MM 2POS" H 5700 4650 50  0001 C CNN
-F 3 "~" H 5700 4650 50  0001 C CNN
-	1    5700 4650
+P 6000 5300
+F 0 "J2" H 6080 5292 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 6080 5201 50  0000 L CNN
+F 2 "Sealtalk-Interface:SCREW TERMINAL BLOCK 3.5MM 2POS" H 6000 5300 50  0001 C CNN
+F 3 "~" H 6000 5300 50  0001 C CNN
+	1    6000 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0108
 U 1 1 5F362E7C
-P 5500 4850
-F 0 "#PWR0108" H 5500 4600 50  0001 C CNN
-F 1 "GND" H 5505 4677 50  0000 C CNN
-F 2 "" H 5500 4850 50  0001 C CNN
-F 3 "" H 5500 4850 50  0001 C CNN
-	1    5500 4850
+P 5800 5500
+F 0 "#PWR0108" H 5800 5250 50  0001 C CNN
+F 1 "GND" H 5805 5327 50  0000 C CNN
+F 2 "" H 5800 5500 50  0001 C CNN
+F 3 "" H 5800 5500 50  0001 C CNN
+	1    5800 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 4850 5500 4750
+	5800 5500 5800 5400
 $Comp
 L power:VCC #PWR0109
 U 1 1 5F363871
@@ -310,17 +310,6 @@ Wire Wire Line
 	5450 3150 5450 3250
 Wire Wire Line
 	5450 3250 5800 3250
-$Comp
-L Connector_Generic:Conn_02x05_Counter_Clockwise J3
-U 1 1 5F364019
-P 6000 3450
-F 0 "J3" H 6050 3867 50  0000 C CNN
-F 1 "Conn_02x05_Counter_Clockwise" H 6050 3776 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 6000 3450 50  0001 C CNN
-F 3 "~" H 6000 3450 50  0001 C CNN
-	1    6000 3450
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0110
 U 1 1 5F3641C7
@@ -339,7 +328,37 @@ Rx
 Wire Wire Line
 	5600 3550 5800 3550
 Text GLabel 5600 3550 0    50   Input ~ 0
-Tx
+GPIO
 Wire Wire Line
 	6550 3550 6300 3550
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP1
+U 1 1 5F366E0F
+P 5950 4100
+F 0 "JP1" H 5950 4305 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 5950 4214 50  0000 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm_NumberLabels" H 5950 4100 50  0001 C CNN
+F 3 "~" H 5950 4100 50  0001 C CNN
+	1    5950 4100
+	1    0    0    -1  
+$EndComp
+Text GLabel 5750 4100 0    50   Output ~ 0
+GPIO
+Text GLabel 5950 4250 0    50   Input ~ 0
+Tx
+Text GLabel 6150 4100 2    50   Output ~ 0
+toRx
+Text GLabel 6300 3650 2    50   Input ~ 0
+toRx
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J3
+U 1 1 5F368FC3
+P 6000 3450
+F 0 "J3" H 6050 3867 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 6050 3776 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 6000 3450 50  0001 C CNN
+F 3 "~" H 6000 3450 50  0001 C CNN
+	1    6000 3450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
