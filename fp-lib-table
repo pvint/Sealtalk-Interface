@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Sealtalk-Interface)(type KiCad)(uri /home/pvint/Elec/Sealtalk-Interface)(options "")(descr ""))
+)
