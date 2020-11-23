@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Sealtalk-Interface-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -158,67 +157,10 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC817.pdf" H 2900 5450 50  0001 L CNN
 	1    2900 5450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transistor_BJT:BC807 Q3
-U 1 1 5F35F9A5
-P 3700 5800
-F 0 "Q3" H 3891 5754 50  0000 L CNN
-F 1 "MMBT2907A" H 3891 5845 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 3900 5725 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC807.pdf" H 3700 5800 50  0001 L CNN
-	1    3700 5800
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	3000 5650 3000 5800
 Wire Wire Line
 	3000 5800 3500 5800
-$Comp
-L power:VCC #PWR0104
-U 1 1 5F35FD01
-P 3800 5450
-F 0 "#PWR0104" H 3800 5300 50  0001 C CNN
-F 1 "VCC" H 3817 5623 50  0000 C CNN
-F 2 "" H 3800 5450 50  0001 C CNN
-F 3 "" H 3800 5450 50  0001 C CNN
-	1    3800 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3800 5450 3800 5600
-$Comp
-L Device:R R6
-U 1 1 5F360294
-P 3800 6300
-F 0 "R6" H 3870 6346 50  0000 L CNN
-F 1 "1k" H 3870 6255 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3730 6300 50  0001 C CNN
-F 3 "~" H 3800 6300 50  0001 C CNN
-	1    3800 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0105
-U 1 1 5F360323
-P 3800 6600
-F 0 "#PWR0105" H 3800 6350 50  0001 C CNN
-F 1 "GND" H 3805 6427 50  0000 C CNN
-F 2 "" H 3800 6600 50  0001 C CNN
-F 3 "" H 3800 6600 50  0001 C CNN
-	1    3800 6600
-	1    0    0    -1  
-$EndComp
-Text GLabel 4350 6050 2    50   Output ~ 0
-Tx
-Wire Wire Line
-	4350 6050 3800 6050
-Wire Wire Line
-	3800 6050 3800 6000
-Wire Wire Line
-	3800 6150 3800 6050
-Connection ~ 3800 6050
-Wire Wire Line
-	3800 6450 3800 6600
 Wire Wire Line
 	2700 5300 2700 5450
 Wire Wire Line
@@ -361,4 +303,88 @@ F 3 "~" H 6000 3450 50  0001 C CNN
 	1    6000 3450
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3800 6450 3800 6600
+Connection ~ 3800 6050
+Wire Wire Line
+	3800 6150 3800 6050
+Wire Wire Line
+	3800 6050 3800 6000
+Wire Wire Line
+	4350 6050 3800 6050
+Text GLabel 4350 6050 2    50   Output ~ 0
+Tx
+$Comp
+L power:GND #PWR0105
+U 1 1 5F360323
+P 3800 6600
+F 0 "#PWR0105" H 3800 6350 50  0001 C CNN
+F 1 "GND" H 3805 6427 50  0000 C CNN
+F 2 "" H 3800 6600 50  0001 C CNN
+F 3 "" H 3800 6600 50  0001 C CNN
+	1    3800 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5F360294
+P 3800 6300
+F 0 "R6" H 3870 6346 50  0000 L CNN
+F 1 "1k" H 3870 6255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3730 6300 50  0001 C CNN
+F 3 "~" H 3800 6300 50  0001 C CNN
+	1    3800 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 5450 3800 5600
+$Comp
+L power:VCC #PWR0104
+U 1 1 5F35FD01
+P 3800 5450
+F 0 "#PWR0104" H 3800 5300 50  0001 C CNN
+F 1 "VCC" H 3817 5623 50  0000 C CNN
+F 2 "" H 3800 5450 50  0001 C CNN
+F 3 "" H 3800 5450 50  0001 C CNN
+	1    3800 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC807 Q3
+U 1 1 5F35F9A5
+P 3700 5800
+F 0 "Q3" H 3891 5754 50  0000 L CNN
+F 1 "MMBT2907A" H 3891 5845 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3900 5725 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC807.pdf" H 3700 5800 50  0001 L CNN
+	1    3700 5800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3000 6200 3000 6350
+$Comp
+L power:GND #PWR0111
+U 1 1 5FB44CA5
+P 3000 6350
+F 0 "#PWR0111" H 3000 6100 50  0001 C CNN
+F 1 "GND" H 3005 6177 50  0000 C CNN
+F 2 "" H 3000 6350 50  0001 C CNN
+F 3 "" H 3000 6350 50  0001 C CNN
+	1    3000 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5FB44CAB
+P 3000 6050
+F 0 "R7" H 3070 6096 50  0000 L CNN
+F 1 "10k" H 3070 6005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2930 6050 50  0001 C CNN
+F 3 "~" H 3000 6050 50  0001 C CNN
+	1    3000 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 5900 3000 5800
+Connection ~ 3000 5800
 $EndSCHEMATC
